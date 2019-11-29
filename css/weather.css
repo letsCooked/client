@@ -1,16 +1,16 @@
 #weather-content p{
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     font-size: 15px;
 }
 #weather-content h4{
     font-size: 17px;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 #weatherData{
     border-radius: ;
-    width: 300px;
+    width: 350px;
     height: 200px;
     border: 3px dashed rgb(248,164,27);
     /* border-radius: 50%; */

@@ -42,7 +42,7 @@ $('#selectCity').change(() => {
 function getWeather(city) {
   $.ajax({
     method: 'get',
-    url: `https://api.weatherbit.io/v2.0/current?city=${city}&key=82ff47dc6ed4480ea25799d00911aa63`
+    url: `https://api.weatherbit.io/v2.0/current?city=${city}&key=497f27388b4540ed9a19e014a6dcb6a1`
   })
     .done(weather => {
       console.log(weather);

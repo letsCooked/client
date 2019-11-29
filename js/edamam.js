@@ -1,6 +1,6 @@
 $.ajax({
   method: "get",
-  url: `http://localhost:3000/edamam/${keyword}`
+  url: `http://localhost:3000/recipe/${keyword}`
 }).done(recipes => {
   event.preventDefault();
   $("").empty();

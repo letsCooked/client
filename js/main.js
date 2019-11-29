@@ -699,6 +699,7 @@ $("#loginButton").on('click', function(e) {
   })
   .done(() => {
     loggingIn()
+    console.log("aaa")
   })
   .fail(err => alert(err.responseJSON.message))
 

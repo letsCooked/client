@@ -660,6 +660,24 @@ let  recipe = {
 
 
 //recipe = hits[0].recipe
+// login 
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  $.ajax({
+    method: 'post',
+    url: 'http://localhost:3000/user/google',
+    data: {
+      email: profile.email
+    } 
+  })
+  .done(data => {
+    console.log(data)
+  })
+  .fail(err => {
+    console.log(err)
+  })
+}
+
 
 $('#recipe-from-edamam').html(`${recipe.label}`)
 $('#recipe-image').html(`<img src=${recipe.image} alt="" class="mx-auto d-block">`)
@@ -693,4 +711,4 @@ function loggingIn(){
   $('#login').hide()
 }
 
-loggingIn()
+loggingOut()

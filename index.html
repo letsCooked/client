@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-signin-client_id" content="207880689682-012ccsgga4k2os9net9q285fj7jpkcud.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="207880689682-012ccsgga4k2os9net9q285fj7jpkcud.apps.googleusercontent.com">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
@@ -16,57 +17,59 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom-style.css">
+
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
     <main id="home">
-    <header>
-        <!-- Navbar Area -->
-        <div class="delicious-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
-
-                        <!-- Logo -->
-                        <a class="nav-brand" href="index.html">Lets Cook!</a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
+        <header>
+            <!-- Navbar Area -->
+            <div class="delicious-main-menu">
+                <div class="classy-nav-container breakpoint-off">
+                    <div class="container">
                         <!-- Menu -->
-                        <div class="classy-menu">
+                        <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
-                            <!-- close btn -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            <!-- Logo -->
+                            <a class="nav-brand" href="index.html">Lets Cook!</a>
+
+                            <!-- Navbar Toggler -->
+                            <div class="classy-navbar-toggler">
+                                <span class="navbarToggler"><span></span><span></span><span></span></span>
                             </div>
 
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li class="active"><a href="index.html">Random</a></li>
-                                    <li><a href="contact.html">Log Out</a></li>
-                                </ul>
+                            <!-- Menu -->
+                            <div class="classy-menu">
+
+                                <!-- close btn -->
+                                <div class="classycloseIcon">
+                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                                </div>
+
+                                <!-- Nav Start -->
+                                <div class="classynav">
+                                    <ul>
+                                        <li class="active"><a href="index.html">Random</a></li>
+                                        <li><a href="contact.html">Log Out</a></li>
+                                    </ul>
+                                </div>
+
                             </div>
-                            
-                        </div>
-                    </nav>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    
+        </header>
 
-    <!-- activities datep dari BORED API-->
-    <div class="receipe-headline my-5 text-center">
-        <h2 id="bored-activity">Bake something you've never tried before</h2>
-    </div>
+
+        <!-- activities datep dari BORED API-->
+        <div class="receipe-headline my-5 text-center">
+            <h2 id="bored-activity">Bake something you've never tried before</h2>
+        </div>
 
         <!-- Receipe Slider -->
         <div class="container">
@@ -99,7 +102,7 @@
                         <div class="ingredients" id="recipe-vitamins">
                             <h4>Vitamins :</h4>
                         </div>
-                        
+
                     </div>
 
                     <!-- Ingredients -->
@@ -111,49 +114,93 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
     </main>
 
     <!-- login -->
-    <main class="inner-cover row" id="login">
-        <div class="col-md-6" id="loginDoang">
-            <h3>Login</h3>
-            <form action="" method="post" id="login-form">
-            <div class="form-group">
-                <label for="emailLogin">Email :</label>
-                <input type="email" class="form-control" name="email" id="emailLogin" aria-describedby="emailHelp" placeholder="Enter email">
+    <div id="notlogin">
+        <!-- login & register -->
+        <div class="wrap_bg">
+            <div id="main" class="login_wrap singUpActive">
+                <div class="login_question_wrap">
+                    <div class="question_singUp ">
+                        <h2 class="title" style="color: #ecb622;">New to us?</h2>
+                        <p style="color: white; font-weight: 900; font-size: larger;">
+                            Create an account and get recipe from us!
+                        </p>
+                        <a href="javascript:void(0)" id="signUpBtn" class="btn_rounded"
+                            style="color: rgb(255, 255, 255); padding: 7px; border: 2px solid rgb(250, 197, 8)"><strong>
+                                SIGN UP
+                            </strong></a>
+                    </div>
+                    <div class="question_login ">
+                        <h2 class="title" style="color: #ecb622;">Have an account?</h2>
+                        <p style="color: white; font-weight: 900; font-size: larger;">
+                            Get recipes of your mood today!
+                        </p>
+                        <a href="javascript:void(0)" id="loginBtn" class="btn btn_rounded"><strong
+                                style="color: rgb(255, 253, 246); padding: 7px; border: 2px solid rgb(250, 197, 8)">
+                                sign
+                                in
+                            </strong></a>
+                    </div>
+                    <div class="action_singUp">
+                        <form id="form-signup">
+                            <fieldset>
+                                <h1 class="title" style="text-align: center; color: black;">Create an
+                                    Account</h1>
+                                <div class="input_block">
+                                    <div class="input_wrap">
+                                        <input type="text" id="sing_name" class="input" placeholder="Full Name">
+                                        <!-- <label for="sing_name" class="label_name"></label> -->
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input type="text" id="sing_email" class="input" placeholder="Email">
+                                        <!-- <label for="sing_email" class="label_mail"></label> -->
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input type="password" id="sing_pass" class="input" placeholder="Password">
+                                        <!-- <label for="sing_pass" class="label_pass"></label> -->
+                                    </div>
+                                </div>
+                                <div class="row center">
+                                    <input type="submit" value="Sing Up" class="btn btn_red">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="action_login">
+                        <form id="form-login">
+                            <fieldset>
+                                <legend class="title" style="text-align: center; color: black;">Lets Cook!</legend>
+                                <div class="input_block">
+                                    <div class="input_wrap">
+                                        <input type="text" id="mail" class="input" placeholder="Email">
+                                        <!-- <label for="sing_pass" class="label_mail"></label> -->
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input type="password" id="pass" class="input" placeholder="Password">
+                                        <!-- <label for="sing_pass" class="label_pass"></label> -->
+                                    </div>
+                                </div>
+                                <div class="row center">
+                                    <input type="submit" value="Login" class="btn btn_red">
+                                    <div class="g-signin2" data-onsuccess="onSignIn" style="margin-left:20px"></div>
+                                </div>
+                                <!-- <a href="#" class="forgotPass">Forgot password?</a> -->
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="login_action_wrap ">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="passwordLogin">Password :</label>
-                <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
-            </div>
-            <div class="form-group">
-                <div class="g-signin2 btn" data-onsuccess="onSignIn"></div>
-            </div>
-            </form>
         </div>
-        <div class="col-md-6" id="register">
-            <h3>Register</h3>
-            <form action="" method="post" id="register-form">
-                <div class="form-group">
-                <label for="emailRegister">Email :</label>
-                <input type="email" class="form-control" name="email" id="emailRegister" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                <label for="passwordRegister">Password :</label>
-                <input type="password" class="form-control" name="password" id="passwordRegister" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Register">
-                </div>
-            </form>
-        </div>
-    </main>
+    </div>
+
 
     <!-- ##### All Javascript Files ##### -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -165,6 +212,7 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="js/main.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

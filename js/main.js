@@ -1,3 +1,21 @@
+const baseURL = 'http://localhost:3000'
+
+$(document).ready(function () {
+  islogin()
+
+  $('#btn-register').on('click', function (e) {
+    e.preventDefault()
+    getRegister()
+  })
+
+  $('#btn-login').on('click', function (e) {
+    e.preventDefault()
+    getLogin()
+  })
+
+})
+
+
 let recipe = {
   uri:
     "http://www.edamam.com/ontologies/edamam.owl#recipe_08793afa743f415b447e47fe1f0e6ae6",
@@ -658,9 +676,6 @@ let recipe = {
   ]
 };
 
-
-//recipe = hits[0].recipe
-// login 
 // function onSignIn(googleUser) {
 //   var profile = googleUser.getBasicProfile();
 //   $.ajax({
@@ -668,14 +683,14 @@ let recipe = {
 //     url: 'http://localhost:3000/user/google',
 //     data: {
 //       email: profile.email
-//     } 
+//     }
 //   })
-//   .done(data => {
-//     console.log(data)
-//   })
-//   .fail(err => {
-//     console.log(err)
-//   })
+//     .done(data => {
+//       console.log(data)
+//     })
+//     .fail(err => {
+//       console.log(err)
+//     })
 // }
 
 

@@ -660,23 +660,49 @@ let  recipe = {
 
 
 //recipe = hits[0].recipe
-// login 
+
+// $(document).ready(function(){
+//   if(localStorage.getItem('access_token'))
+// })
+
+// login
 function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
+  const token = googleUser.getAuthResponse().id_token;
+
   $.ajax({
     method: 'post',
     url: 'http://localhost:3000/user/google',
     data: {
-      email: profile.email
+      token
     } 
   })
-  .done(data => {
-    console.log(data)
+  .done(({token, name, email}) => {
+    localStorage.setItem('access_token', token)
+    loggingIn()
   })
   .fail(err => {
     console.log(err)
   })
 }
+
+$("#loginButton").on('click', function(e) {
+  e.preventDefault()
+  const email = $('#emailLogin').val()
+  const password = $('#passwordLogin').val()
+  $.ajax({
+    method: 'post',
+    url: 'http://localhost:3000/user/login',
+    data: {
+      email,
+      password
+    }
+  })
+  .done(() => {
+    loggingIn()
+  })
+  .fail(err => alert(err.responseJSON.message))
+
+})
 
 
 $('#recipe-from-edamam').html(`${recipe.label}`)

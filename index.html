@@ -6,8 +6,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-signin-client_id"
-        content="207880689682-012ccsgga4k2os9net9q285fj7jpkcud.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="207880689682-012ccsgga4k2os9net9q285fj7jpkcud.apps.googleusercontent.com">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
@@ -25,55 +24,56 @@
 </head>
 
 <body>
-    <div id="home">
-        <header>
-            <!-- Navbar Area -->
-            <div class="delicious-main-menu">
-                <div class="classy-nav-container breakpoint-off">
-                    <div class="container">
+    <main id="home">
+    <header>
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="index.html">Lets Cook!</a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
                         <!-- Menu -->
-                        <nav class="classy-navbar justify-content-between" id="deliciousNav">
+                        <div class="classy-menu">
 
-                            <!-- Logo -->
-                            <a class="nav-brand" href="index.html">Lets Cook!</a>
-
-                            <!-- Navbar Toggler -->
-                            <div class="classy-navbar-toggler">
-                                <span class="navbarToggler"><span></span><span></span><span></span></span>
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
 
-                            <!-- Menu -->
-                            <div class="classy-menu">
-
-                                <!-- close btn -->
-                                <div class="classycloseIcon">
-                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                                </div>
-
-                                <!-- Nav Start -->
-                                <div class="classynav">
-                                    <ul>
-                                        <li class="active"><a href="index.html">Random</a></li>
-                                        <li><a href="contact.html">Log Out</a></li>
-                                    </ul>
-                                </div>
-
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a id="button-random" href=" ">Random</a></li>
+                                    <li><a href="contact.html">Log Out</a></li>
+                                </ul>
                             </div>
-                        </nav>
-                    </div>
+                            
+                        </div>
+                    </nav>
                 </div>
             </div>
-        </header>
-
-
-        <!-- activities datep dari BORED API-->
-        <div id="note"></div>
-        <div class="receipe-headline my-5 text-center">
-            <h2 id="bored-activity">Bake something you've never tried before</h2>
         </div>
+    </header>
+    
 
+    <!-- activities datep dari BORED API-->
+    <div class="receipe-headline my-5 text-center">
+        <h2 id="bored-activity">Bake something you've never tried before</h2>
+    </div>
+
+    <!-- Receipe Container-->
+    <div class="container row">
         <!-- Receipe Slider -->
-        <div class="container">
+        <div class="receipe container col-md-4">
             <div class="row">
                 <div class="col-12">
                     <div class="" id="recipe-image">
@@ -84,32 +84,27 @@
         </div>
 
         <!-- Receipe Content Area -->
-        <div class="receipe-content-area">
+        <div class="receipe receipe-content-area col-md-6">
             <div class="container">
 
-                <div class="row">
-                    <div class="col-12 col-md-8">
-                        <div class="receipe-headline my-5">
-                            <span>November 29, 2019</span>
+               
+                        <div class="receipe-headline">
                             <!-- dapet dari edamam -->
                             <h2 id="recipe-from-edamam">Vegetarian cheese salad</h2>
                         </div>
-                    </div>
-
-                </div>
+                    
 
                 <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <div class="ingredients" id="recipe-vitamins">
-                            <h4>Vitamins :</h4>
-                        </div>
-
-                    </div>
-
                     <!-- Ingredients -->
                     <div class="col-12 col-lg-6">
                         <div class="ingredients" id="recipe-ingredients">
-                            <h4>Ingredients :</h4>
+                            <h6>Ingredients :</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="ingredients" id="recipe-vitamins">
+                            <h6>Vitamins :</h6>
                         </div>
                     </div>
                 </div>
@@ -213,6 +208,8 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="./js/login.js"></script>
+    <script src="js/bored.js"></script>
+    <script src="js/edamam.js"></script>
     <script src="js/main.js"></script>
 </body>
 

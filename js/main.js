@@ -684,5 +684,14 @@ for (let i = 0; i < Object.keys(recipe.totalNutrients).length; i++) {
     }
 }
 
-$('#home').hide()
-$('#login').show()
+
+function loggingOut(){
+  $('#home').hide()
+  $('#login').show()
+}
+function loggingIn(){
+  $('#home').show()
+  $('#login').hide()
+}
+
+loggingIn()

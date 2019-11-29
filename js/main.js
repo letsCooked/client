@@ -702,13 +702,13 @@ for (let i = 0; i < Object.keys(recipe.totalNutrients).length; i++) {
   }
 }
 
-// function loggingOut() {
-//   $('#home').hide()
-//   $('#login').show()
-// }
-// function loggingIn() {
-//   $('#home').show()
-//   $('#login').hide()
-// }
+function loggingOut() {
+  $('#home').hide()
+  $('#login').show()
+}
+function loggingIn() {
+  $('#home').show()
+  $('#login').hide()
+}
 
-// loggingOut()
+loggingOut()

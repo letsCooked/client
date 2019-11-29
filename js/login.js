@@ -111,7 +111,7 @@ function signOut() {
 function welcome() {
   $('#note').empty()
   $('#note').append(`
-  <h1 style="text-align: center; display: flex; justify-content: center; align-items: center;"> Hi&nbsp<strong style=color:rgb(248,164,27); text-align: center; display: flex; justify-content: center; align-items: center;>${localStorage.getItem("name")}</strong> , lets cook!</h1>
+  <h1 style="text-align: center; display: flex; justify-content: center; align-items: center;"> Hi&nbsp<strong style=color:#4bb592; text-align: center; display: flex; justify-content: center; align-items: center;>${localStorage.getItem("name")}</strong> , lets cook!</h1>
   `)
 }
 
@@ -124,32 +124,6 @@ function setAvatar() {
   <a href=# onclick="signOut()" class="btnbasic ui tiny button" style="width: 100px; padding: 5px;"> Logout </a>
   `)
 }
-
-// function getWeather() {
-//   $.ajax({
-//     method: 'get',
-//     url: `https://api.weatherbit.io/v2.0/current?lat=-6.258407&lon=106.781166&key=82ff47dc6ed4480ea25799d00911aa63`
-//     // url: `https://api.weatherbit.io/v2.0/current?city=Bandung,ID&key=82ff47dc6ed4480ea25799d00911aa63`
-//   })
-//     .done(weather => {
-//       console.log(weather);
-//       console.log(weather.data[0])
-//       let data = weather.data[0]
-//       $(`#weather`).html(`
-//     <img src = "https://www.weatherbit.io/static/img/icons/${data.weather.icon}.png" alt = "" style = "width: 90px; margin:0" >
-//     <div id=weather-content class=basic>
-//       <h4>${data.weather.description}</h4>
-//       <p>${data.city_name} ${data.country_code}<p>
-//         <p>${data.timezone}</p>
-//         <p><strong>${data.datetime}</strong></p>
-//         <p>temperature : ${data.temp}°C</p>
-//       </div>
-//         `)
-//     })
-//     .fail(err => {
-//       console.log(err)
-//     })
-// }
 
 var $wrap = $('#main');
 var $signUpBtn = $wrap.find('#signUpBtn');

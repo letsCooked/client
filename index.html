@@ -18,26 +18,29 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/weather.css">
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
-    <div id="home">
+    <div id="home" style="text-align: center;">
         <header>
             <!-- Navbar Area -->
             <div class="delicious-main-menu">
-                <div class="classy-nav-container breakpoint-off" style="background-color: teal;">
+                <div class="classy-nav-container breakpoint-off" style="background-color: transparent;">
                     <div class="container">
                         <!-- Menu -->
                         <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
                             <!-- Logo -->
-                            <a class="nav-brand" href="index.html">Lets Cook!</a>
-
+                            <a style="color:rgb(250, 197, 8); font-weight: 900; 
+                            " class="nav-brand logozz" href="index.html">LETS
+                                COOK!</a>
+                            <img src="https://files.slack.com/files-pri/T1UKZ9NBV-FQVK4FAKB/tenorcooking.gif" alt=""
+                                style="width: 90px; margin-top: 20px; margin-right: 60px;">
                             <!-- Navbar Toggler -->
                             <div class="classy-navbar-toggler">
                                 <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -54,7 +57,7 @@
                                 <!-- Nav Start -->
                                 <div class="classynav">
                                     <ul>
-                                        <li><a onclick="signOut()" href="#">Log Out</a></li>
+                                        <li><a class="btnbasic" onclick="signOut()" href="#">Log Out</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -64,30 +67,41 @@
             </div>
         </header>
 
-        <div id="note" style="margin: 30px;"></div>
 
+        <div id="note" style="margin: 30px;"></div>
         <!-- weather -->
         <div id=weather>
             <div class="basic" style="margin-right: 30px;">
                 <h5 style="letter-spacing: 0.15em; text-align: center;"> WHERE ARE YOU ? </h5>
                 <select id="selectCity" class="form-control form-control-md" style="width: 300px;">
-                    <option value="Sabang,ID" id="city">Sabang,ID</option>
-                    <option value="Jakarta,ID" id="city">Jakarta,ID</option>
-                    <option value="Bogor,ID" id="city">Bogor,ID</option>
-                    <option value="Depok,ID" id="city">Depok,ID</option>
-                    <option value="Bandung,ID" id="city">Bandung,ID</option>
-                    <option value="Tanggerang,ID" id="city">Tanggerang,ID</option>
-                    <option value="Surabaya,ID" id="city">Surabaya,ID</option>
-                    <option value="Medan,ID" id="city">Medan,ID</option>
-                    <option value="Semarang,ID" id="city">Semarang,ID</option>
-                    <option value="Solo,ID" id="city">Solo,ID</option>
-                    <option value="Makassar,ID" id="city">Makassar,ID</option>
-                    <option value="Manado,iD" id="city">Manado,ID</option>
-                    <option value="Berastagi,ID" id="city">Berastagi,ID</option>
-                    <option value="Kuta,ID" id="city">Kuta,ID</option>
-                    <option value="Padang,ID" id="city">Padang,ID</option>
-                    <option value="Jambi,ID" id="city">Jambi,ID</option>
-                    <option value="Jayapura,ID" id="city">Jayapura,ID</option>
+                    <option value="Jakarta,ID">Jakarta,ID</option>
+                    <option value="Sabang,ID">Sabang,ID</option>
+                    <option value="Bogor,ID">Bogor,ID</option>
+                    <option value="Depok,ID">Depok,ID</option>
+                    <option value="Bandung,ID">Bandung,ID</option>
+                    <option value="Tanggerang,ID">Tanggerang,ID</option>
+                    <option value="Surabaya,ID">Surabaya,ID</option>
+                    <option value="Medan,ID">Medan,ID</option>
+                    <option value="Semarang,ID">Semarang,ID</option>
+                    <option value="Solo,ID">Solo,ID</option>
+                    <option value="Makassar,ID">Makassar,ID</option>
+                    <option value="Manado,iD">Manado,ID</option>
+                    <option value="Berastagi,ID">Berastagi,ID</option>
+                    <option value="Kuta,ID">Kuta,ID</option>
+                    <option value="Padang,ID">Padang,ID</option>
+                    <option value="Jambi,ID">Jambi,ID</option>
+                    <option value="Jayapura,ID">Jayapura,ID</option>
+                    <option value="Raleigh,NC">Raleigh,NC</option>
+                    <option value="LA,US">Los Angeles,US</option>
+                    <option value="Seattle,US">Seattle,US</option>
+                    <option value="Texas,US">Texas,US</option>
+                    <option value="Florida,US">Florida,US</option>
+                    <option value="Alabama,US">Alabama,US</option>
+                    <option value="Hawaii,US">Hawaii,US</option>
+                    <option value="Ohio,US">Ohio,US</option>
+                    <option value="Georgia,US">Georgia,US</option>
+                    <option value="Alaska,US">Alaska,US</option>
+
                 </select>
             </div>
             <div id=weatherData></div>
@@ -119,7 +133,7 @@
 
                             <div class="receipe-headline">
                                 <!-- dapet dari edamam -->
-                                <h2 id="recipe-from-edamam"></h2>
+                                <h3 style="color:rgb(49, 180, 145)" id="recipe-from-edamam"></h3>
                             </div>
 
 

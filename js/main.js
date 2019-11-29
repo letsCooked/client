@@ -94,7 +94,7 @@ function genRecipe() {
 
       $('#recipe-ingredients').empty()
       $('#recipe-vitamins').empty()
-      $('#bored-activity').html(`${activity}`)
+      $('#bored-activity').html(`------ ${activity} ------`)
       $("#recipe-from-edamam").html(`${recipe.label}`);
       $("#recipe-image").html(
         `<img src=${recipe.image} alt="" class="mx-auto d-block">`
@@ -102,8 +102,8 @@ function genRecipe() {
       for (let i = 0; i < recipe.ingredientLines.length; i++) {
         $("#recipe-ingredients")
           .append(`<div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">${recipe.ingredientLines[i]}</label>
+            <input type="checkbox" class="custom-control-input" id="customCheck${i}">
+            <label class="custom-control-label" for="customCheck${i}">${recipe.ingredientLines[i]}</label>
             </div>`);
       }
       for (let i = 0; i < Object.keys(recipe.totalNutrients).length; i++) {

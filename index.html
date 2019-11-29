@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-signin-client_id" content="207880689682-012ccsgga4k2os9net9q285fj7jpkcud.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="207880689682-012ccsgga4k2os9net9q285fj7jpkcud.apps.googleusercontent.com">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
@@ -17,6 +18,7 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom-style.css">
 
@@ -24,93 +26,130 @@
 </head>
 
 <body>
-    <main id="home">
-    <header>
-        <!-- Navbar Area -->
-        <div class="delicious-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
-
-                        <!-- Logo -->
-                        <a class="nav-brand" href="index.html">Lets Cook!</a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
+    <div id="home">
+        <header>
+            <!-- Navbar Area -->
+            <div class="delicious-main-menu">
+                <div class="classy-nav-container breakpoint-off" style="background-color: teal;">
+                    <div class="container">
                         <!-- Menu -->
-                        <div class="classy-menu">
+                        <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
-                            <!-- close btn -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            <!-- Logo -->
+                            <a class="nav-brand" href="index.html">Lets Cook!</a>
+
+                            <!-- Navbar Toggler -->
+                            <div class="classy-navbar-toggler">
+                                <span class="navbarToggler"><span></span><span></span><span></span></span>
                             </div>
 
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li class="active"><a id="button-random" href=" ">Random</a></li>
-                                    <li><a href="contact.html">Log Out</a></li>
-                                </ul>
+                            <!-- Menu -->
+                            <div class="classy-menu">
+
+                                <!-- close btn -->
+                                <div class="classycloseIcon">
+                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                                </div>
+
+                                <!-- Nav Start -->
+                                <div class="classynav">
+                                    <ul>
+                                        <li class="active"><a id="button-random" href=" ">Random</a></li>
+                                        <li><a href="contact.html">Log Out</a></li>
+                                    </ul>
+                                </div>
+
                             </div>
-                            
-                        </div>
-                    </nav>
+                        </nav>
+                    </div>
                 </div>
             </div>
+        </header>
+
+        <div id="note" style="margin: 30px;"></div>
+
+        <!-- weather -->
+        <div id=weather>
+            <div class="basic" style="margin-right: 30px;">
+                <h5 style="letter-spacing: 0.15em; text-align: center;"> WHERE ARE YOU ? </h5>
+                <select id="selectCity" class="form-control form-control-md" style="width: 300px;">
+                    <option value="Sabang,ID" id="city">Sabang,ID</option>
+                    <option value="Jakarta,ID" id="city">Jakarta,ID</option>
+                    <option value="Bogor,ID" id="city">Bogor,ID</option>
+                    <option value="Depok,ID" id="city">Depok,ID</option>
+                    <option value="Bandung,ID" id="city">Bandung,ID</option>
+                    <option value="Tanggerang,ID" id="city">Tanggerang,ID</option>
+                    <option value="Surabaya,ID" id="city">Surabaya,ID</option>
+                    <option value="Medan,ID" id="city">Medan,ID</option>
+                    <option value="Semarang,ID" id="city">Semarang,ID</option>
+                    <option value="Solo,ID" id="city">Solo,ID</option>
+                    <option value="Makassar,ID" id="city">Makassar,ID</option>
+                    <option value="Manado,iD" id="city">Manado,ID</option>
+                    <option value="Berastagi,ID" id="city">Berastagi,ID</option>
+                    <option value="Kuta,ID" id="city">Kuta,ID</option>
+                    <option value="Padang,ID" id="city">Padang,ID</option>
+                    <option value="Jambi,ID" id="city">Jambi,ID</option>
+                    <option value="Jayapura,ID" id="city">Jayapura,ID</option>
+                </select>
+            </div>
+            <div id=weatherData></div>
         </div>
-    </header>
-    
 
-    <!-- activities datep dari BORED API-->
-    <div class="receipe-headline my-5 text-center">
-        <h2 id="bored-activity">Bake something you've never tried before</h2>
-    </div>
-
-    <!-- Receipe Container-->
-    <div class="container row">
-        <!-- Receipe Slider -->
-        <div class="receipe container col-md-4">
+        <!-- activities datep dari BORED API-->
+        <div class="receipe-headline my-5 text-center">
+            <h2 id="bored-activity">Bake something you've never tried before</h2>
+        </div>
+        <!-- Receipe Container-->
+        <div class="container">
+            <!-- Receipe Slider -->
             <div class="row">
-                <div class="col-12">
-                    <div class="" id="recipe-image">
-                        <!-- <img src="img/bg-img/bg5.jpg" alt=""> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Receipe Content Area -->
-        <div class="receipe receipe-content-area col-md-6">
-            <div class="container">
-
-               
-                        <div class="receipe-headline">
-                            <!-- dapet dari edamam -->
-                            <h2 id="recipe-from-edamam">Vegetarian cheese salad</h2>
-                        </div>
-                    
-
-                <div class="row">
-                    <!-- Ingredients -->
-                    <div class="col-12 col-lg-6">
-                        <div class="ingredients" id="recipe-ingredients">
-                            <h6>Ingredients :</h6>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-6">
-                        <div class="ingredients" id="recipe-vitamins">
-                            <h6>Vitamins :</h6>
+                <div class="receipe container col-md-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="" id="recipe-image">
+                                <!-- <img src="img/bg-img/bg5.jpg" alt=""> -->
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Receipe Content Area -->
+                <div class="recipe col-md-7">
+                    <div class="receipe receipe-content-area">
+                        <div class="container">
+
+
+                            <div class="receipe-headline">
+                                <!-- dapet dari edamam -->
+                                <h2 id="recipe-from-edamam"></h2>
+                            </div>
+
+
+                            <div class="row">
+                                <!-- Ingredients -->
+                                <div class="col-12 col-lg-6">
+                                    <div class="ingredients" id="recipe-ingredients">
+                                        <h6></h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6">
+                                    <div class="ingredients" id="recipe-vitamins">
+                                        <h6></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+
         </div>
     </div>
+
 
     <!-- login -->
     <div id="notlogin">
@@ -197,16 +236,7 @@
 
     <!-- ##### All Javascript Files ##### -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
     <script src="./js/login.js"></script>
     <script src="js/bored.js"></script>
     <script src="js/edamam.js"></script>

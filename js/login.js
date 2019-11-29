@@ -108,18 +108,6 @@ function signOut() {
   Swal.fire('Success!', "Your Account is Logged out!", 'success')
 }
 
-function islogin() {
-  if (localStorage.getItem('token')) {
-    $('#notlogin').hide()
-    $('#home').show()
-    welcome()
-  } else {
-    $('#notlogin').show()
-    $('#home').hide()
-
-  }
-}
-
 function welcome() {
   $('#note').empty()
   $('#note').append(`
